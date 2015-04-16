@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="shower/themes/ideil/styles/screen.css">
+	<link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
 </head>
 <body class="list">
 	<header class="caption">
@@ -30,23 +30,240 @@
 				font-style: italic;
 				font-size: 20px;
 			}
-				#cover p a {
-					color: #fff;
-				}
+			#cover p a {
+				color: #fff;
+			}
+			.m-r-md {
+				margin-right: 100px;
+			}
 		</style>
 		<footer><a href="http://dribbble.com/shots/702565-Space-Ghost">Space Ghost</a>, шпалери від Mads Frantzen</footer>
 	</div></section>
 
-	<section class="slide"><div>
-		<h2>slide 1</h2>
+	<section class="slide" id="problems"><div>
+		<h2>Проблема</h2>
+
+		<img src="pictures/freakout.png" width="400" height="300" alt="">
+
+		<ul>
+			<li>Ти не один</li>
+			<li class="next">Все поламалось, верніть назад</li>
+			<li class="next">
+				Хто це написав?
+			</li>
+		</ul>
+
+		<style>
+			#problems img {
+				position: absolute;
+				top: 100px;
+				right: 50px;
+			}
+		</style>
+		<footer><a href="http://dribbble.com/shots/962077-Robot-Freaking-Out">Robot Freaking Out</a>, шпалери від Mads Frantzen</footer>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>slide 2</h2>
+		<h2>VCS</h2>
+
+		<p>Version Control System - програмне забезпечення для полегшення роботи з інформацією, яка змінюється. Система керування версіями дозволяє зберігати кілька версій одного і того ж документа, при необхідності повертатися до більш ранніх версій, визначати, хто і коли зробив ту чи іншу зміну, і багато іншого.</p>
+
+		<div class="">
+
+			<img src="pictures/icon.git.png" height="50" alt="git" class="m-r-md">
+
+			<img src="pictures/subversion_logo.png" height="50" alt="svn">
+
+		</div>
+
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>slide 3</h2>
+		<img src="pictures/subversion_logo.png" height="200" alt="svn" style="float: left; margin-right: 60px;">
+
+		<p>
+			Subversion — централізована система. Дані зберігаються в єдиному сховищі. При збереженні нових версій використовується дельта-компресія, тобто система знаходить відмінності нової версії від попередньої і записує тільки їх, уникаючи непотрібного дублювання даних
+		</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/icon.git.png" height="100" alt="git" style="float: left; margin-right: 60px;">
+
+		<p>
+			Git — розподілена система керування версіями файлів та спільної роботи. Git є однією з найефективніших, надійних і високопродуктивних систем керування версіями, що надає гнучкі засоби нелінійної розробки, що базуються на відгалуженні і злитті гілок.
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Get started GIT</h2>
+
+		<code>$ git init</code>
+
+		<pre class="next"><code>Initialized empty Git repository in /.git/
+Success!</code></pre>
+
+		<code class="next">$ git clone https://github.com/laravel/laravel.git</code>
+
+		<pre class="next"><code>Cloning into 'laravel'...
+remote: Counting objects: 24936, done.</code></pre>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Versioning</h2>
+
+		<p><b>Commit</b> - фіксує нові зміни у файлах, іменується кожен commit хешем sha1</p>
+
+		<img src="pictures/commits.png" height="130" width="655" alt="commits">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/branches.png" width="800" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>.gitignore</h2>
+
+		<p>Файл описує маски файлів, які не повинні попадати в commit, іншими словами, ці файли ігноруються</p>
+
+		<pre>
+			<code>.env</code>
+			<code>/node_modules</code>
+			<code>/static/content/</code>
+			<code>/cache/*</code>
+		</pre>
+
+	</div></section>
+
+	<section class="slide"><div>
+
+		<img src="pictures/status.jpg" height="400" alt="" style="float: right">
+
+		<h2>Status</h2>
+
+		<p>Відображає поточний стан репозиторію</p>
+
+		<code>$ git status</code>
+
+	</div></section>
+
+	<section class="slide"><div>
+
+		<h2>Pull</h2>
+
+		<p>"Потягнути" дані з сервера в локальний репозиторій</p>
+
+		<code>$ git pull</code>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Branching</h2>
+
+		Розбивання на гілки дозволяє паралельно працювати над різним функціоналаом, не заважаючи іншим
+
+		<p><code>$ git checkout -b develop</code></p>
+
+		<img src="pictures/branches-graph.png" height="151" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Merge</h2>
+
+		Обєднання змін з різник гілок
+
+		<div><img src="pictures/branches-merge.png" height="151" alt=""></div>
+
+		<pre>
+			<code class="next">$ git checkout master</code>
+			<code class="next">$ git merge develop</code>
+		</pre>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Diff</h2>
+
+		<p>Візуальне відображення змін</p>
+
+		<img src="pictures/diff1.png" width="800" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/diff.png" width="800" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Conflict</h2>
+
+		Може виникнути, якщо при обєднанні змін виявилось, що було змінено один і той же фрагмент
+
+		<img src="pictures/conflict.png" height="246" width="786" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Git-flow</h2>
+
+		<img src="pictures/gitflow.png" height="350" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Git hook</h2>
+
+		<div><code>.git/hooks</code></div>
+
+		<hr>
+
+		<div><code>pre-commit</code></div>
+		<div><code>pre-push</code></div>
+		<div><code>pre-rebase</code></div>
+		<div><code>...</code></div>
+	</div></section>
+
+	<section class="slide"><div>
+		<div style="text-align: center">
+			<img src="pictures/logoSourceTree.png" width="275" height="63" alt="">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/sourcetree1.png" height="400" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/sourcetree2.png" height="400" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<div style="text-align: center">
+			<img src="pictures/github-logo.png" height="230" width="580" alt="">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<div style="text-align: center">
+			<img src="pictures/try-git.jpg" height="375" width="500" alt="">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<div style="text-align: center">
+			<h2>Continuous integration</h2>
+
+			<img src="pictures/ci.jpg" height="300" alt="">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<div style="text-align: center">
+			<h2>Дякую за увагу</h2>
+
+			<div>Репозиторій презентації</div>
+			<code>https://github.com/litac/slides-vcs-20150416</code>
+
+			<img src="pictures/qrcode.png" height="200" width="200" alt="">
+		</div>
 	</div></section>
 
 	<p class="badge"><a href="https://github.com/litac">LITaC на Github</a></p>
